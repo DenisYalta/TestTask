@@ -1,0 +1,60 @@
+{
+  "store":
+  [
+    {
+      "playerName": "Sasha",
+      "sellPicture": "a",
+      "playerPicture": "a",
+      "numberOfItems": "x5",
+      "sellName": "Corn",
+      "price": "10",
+      "level": "7"
+
+    },
+    {
+      "playerName": "Denis",
+      "sellPicture": "a",
+      "playerPicture": "a",
+      "numberOfItems": "x3",
+      "sellName": "Shrom",
+      "price": "15",
+      "level": "5"
+    },
+    {
+      "playerName": "Vlad",
+      "sellPicture": "a",
+      "playerPicture": "a",
+      "numberOfItems": "x7",
+      "sellName": "Weat",
+      "price": "84",
+      "level": "10"
+    },
+    {
+      "playerName": "Philipp",
+      "sellPicture": "a",
+      "playerPicture": "a",
+      "numberOfItems": "x4",
+      "sellName": "Corn",
+      "price": "9",
+      "level": "15"
+    },
+    {
+      "playerName": "Masha",
+      "sellPicture": "a",
+      "playerPicture": "a",
+      "numberOfItems": "x4",
+      "sellName": "Corn",
+      "price": "17",
+      "level": "55"
+    },
+    {
+      "playerName": "Ivan",
+      "sellPicture": "a",
+      "playerPicture": "a",
+      "numberOfItems": "x1",
+      "sellName": "Weat",
+      "price": "56",
+      "level": "5"
+    }
+  ]
+}
