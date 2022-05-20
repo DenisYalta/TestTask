@@ -3,6 +3,8 @@ using UnityEngine;
 
 using System;
 using UnityEngine.UI;
+using System.Collections;
+using UnityEngine.Networking;
 
 public class JsonReader : MonoBehaviour
 {
@@ -34,8 +36,8 @@ public class JsonReader : MonoBehaviour
     [System.Serializable] public class StoreText
     {
         public TextMeshProUGUI playerNameText;
-        public TextMeshProUGUI sellPictureText;
-        public TextMeshProUGUI playerPictureText;
+        public Image sellPictureImage;
+        public RawImage playerPictureImage;
         public TextMeshProUGUI numberOfItemsText;
         public TextMeshProUGUI sellNameText;
         public TextMeshProUGUI priceText;
@@ -66,22 +68,53 @@ public class JsonReader : MonoBehaviour
         {
     
             storeText.text[textToShow].playerNameText.text = storeList.store[firstItemToShow].playerName;
-            storeText.text[textToShow].sellPictureText.text = storeList.store[firstItemToShow].sellPicture;
-            storeText.text[textToShow].playerPictureText.text = storeList.store[firstItemToShow].playerPicture;
+            //storeText.text[textToShow].playerPictureImage.text = storeList.store[firstItemToShow].playerPicture;
             storeText.text[textToShow].numberOfItemsText.text = storeList.store[firstItemToShow].numberOfItems;
             storeText.text[textToShow].sellNameText.text = storeList.store[firstItemToShow].sellName;
             storeText.text[textToShow].priceText.text = storeList.store[firstItemToShow].price;
             storeText.text[textToShow].levelText.text = storeList.store[firstItemToShow].level;
+
+
+            storeText.text[textToShow].sellPictureImage.sprite = Resources.Load<Sprite>(storeList.store[firstItemToShow].sellPicture);
+
+
+            StartCoroutine (DownloadImage(textToShow, firstItemToShow));
+            
             textToShow++;
         }
     }
 
+    private IEnumerator DownloadImage(int picIndex, int urlIndex)
+    {
+        UnityWebRequest request = UnityWebRequestTexture.GetTexture(storeList.store[urlIndex].playerPicture);
+        yield return request.SendWebRequest();
+        if (request.isNetworkError || request.isHttpError)   // can not download 
+        {
+            Debug.Log(request.error);
+        }
+        else
+        {
+            storeText.text[picIndex].playerPictureImage.texture = ((DownloadHandlerTexture)request.downloadHandler).texture;
+        }
+
+           
+    }
+
+
+
 
     private void FindLastPage(int numberOfItems)
     {
-        Debug.Log(numberOfItems);
-        maxPage = numberOfItems / 6;
-        Debug.Log(maxPage);
+        if (numberOfItems / 6 > 16.0) // if there is more than 100 items to sell
+        {
+            maxPage = 16;
+        }
+        else
+        {
+            maxPage = numberOfItems / 6;
+        }
+       
+        
     }
 
     private void CheckPages()
