@@ -14,7 +14,7 @@ public class JsonReader : MonoBehaviour
     private int currentPage = 1;
     private int maxPage = 0;
 
-   [System.Serializable]  private class Store
+   [Serializable]  private class Store
     {
         public string playerName;
         public string sellPicture;
@@ -25,7 +25,7 @@ public class JsonReader : MonoBehaviour
         public string level;
     }
                                                              // stores data from JSON
-   [System.Serializable] private class StoreList
+   [Serializable] private class StoreList
     {
         public Store[] store;
     }
@@ -33,7 +33,7 @@ public class JsonReader : MonoBehaviour
     private StoreList storeList = new StoreList();
 
 
-    [System.Serializable] public class StoreText
+    [Serializable] public class StoreText
     {
         public TextMeshProUGUI playerNameText;
         public Image sellPictureImage;
@@ -153,6 +153,8 @@ public class JsonReader : MonoBehaviour
     private void Start()
     {
         storeList = JsonUtility.FromJson<StoreList>(textJson.text); // readind Json data
+
+
         FindLastPage(storeList.store.Length);
         CheckPages();
 
