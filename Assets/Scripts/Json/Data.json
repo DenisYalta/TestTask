@@ -1,7 +1,7 @@
 {
   "store": [
     {
-      "playerName": "Sasha",
+      "playerName": "Петраков",
       "sellPicture": "Butter",
       "playerPicture": "https://c.wallhere.com/photos/fc/9a/1366x768_px_Canada_landscape_mountain_stars_Trees-1080526.jpg!d",
       "numberOfItems": "x5",
@@ -20,7 +20,7 @@
       "level": "5"
     },
     {
-      "playerName": "Vlad",
+      "playerName": "Sasha",
       "sellPicture": "Corn",
       "playerPicture": "https://kartinkin.net/uploads/posts/2022-03/1647135000_1-kartinkin-net-p-kartinki-sobaki-korgi-1.jpg",
       "numberOfItems": "x7",
@@ -29,7 +29,7 @@
       "level": "10"
     },
     {
-      "playerName": "Philipp",
+      "playerName": "Филипп",
       "sellPicture": "Mushrooms",
       "playerPicture": "https://a.d-cd.net/79dd666s-1920.jpg",
       "numberOfItems": "x4",
@@ -56,7 +56,7 @@
       "level": "5"
     },
     {
-      "playerName": "Philipp",
+      "playerName": "Петя",
       "sellPicture": "Butter",
       "playerPicture": "https://avatars.mds.yandex.net/i?id=8e8e1cfa7aff8fa9fe033dcc2be13c75-4055226-images-thumbs&n=13&exp=1",
       "numberOfItems": "x4",
@@ -101,7 +101,7 @@
       "level": "5"
     },
     {
-      "playerName": "Vlad",
+      "playerName": "Владик",
       "sellPicture": "Wheat",
       "playerPicture": "https://avatars.mds.yandex.net/get-zen_doc/2783222/pub_5fa7d9b5b1fbcf2e233b16ab_5fa7dac5b1fbcf2e233ced7a/scale_1200",
       "numberOfItems": "x7",
