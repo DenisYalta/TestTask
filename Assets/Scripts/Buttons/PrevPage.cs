@@ -5,6 +5,6 @@ public class PrevPage : MonoBehaviour
 {
 	public void ShowPrevPage()
 	{
-		Debug.Log("-123");
+		EventManager.current.ChangePageTrigger(-1);
 	}
 }

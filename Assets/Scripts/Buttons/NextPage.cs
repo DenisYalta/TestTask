@@ -6,6 +6,6 @@ public class NextPage : MonoBehaviour
 {
     public void ShowNextPage()
     {
-        Debug.Log("123");
+        EventManager.current.ChangePageTrigger(1);
     }
 }
